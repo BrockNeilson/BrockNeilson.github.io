@@ -1,694 +1,285 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-
-    <meta charset="utf-8">
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>Duezee</title>
-    <meta name="description" content="Startups template">
-    <meta name="keywords" content="Startups template">
-    <link rel="shortcut icon" href="assets/img/favicon.ico">
-    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.jpg">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/apple-touch-icon-72x72.jpg">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/apple-touch-icon-114x114.jpg">
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="assets/css/font-lineicons.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="assets/css/animate.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="assets/css/toastr.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
-
-    <script type="text/javascript" data-untorch-campaign="444" src="http://untorch.com/js/untorch.min.js"></script>
-    <!--[if lt IE 9]>
-        <script src="assets/js/html5.js"></script>
-        <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
-</head>
-
-<body id="landing-page">
-
-    <!-- Preloader -->
-    <div id="mask">
-        <div id="loader"></div>
-    </div>
-        
-    <header>
-        <nav class="navigation navigation-header">
-            <div class="container">
-                <div class="navigation-brand">
-                    <div class="brand-logo">
-						<a href="index.html" class="logo"></a>
-						<span class="sr-only">Duezee</span>
-                    </div>
-                    <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown" data-target=".navigation-navbar">
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                    </button>
-                </div>
-                <div class="navigation-navbar">
-                    <ul class="navigation-bar navigation-bar-left">
-                        <li class="active"><a href="#index">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#features">Features</a></li>
-						<!--<li><a href="#product">Prices</a></li> -->
-                        <li><a href="#feedback">Feedback</a></li>
-                        <!--<li><a href="#team">Team</a></li>-->
-                        <li><a href="#footer">Contact</a></li>
-                    </ul>
-                    <ul class="navigation-bar navigation-bar-right">
-                        <li><a href="register.html">Login</a></li>
-                        <li class="featured"><a href="register.html">Sign up</a></li>
-                    </ul>  
-                </div>
-            </div>
-        </nav>
-    </header>
-    
-	<div id="hero" class="static-header register-version light clearfix">
-
-        <div class="text-heading">
-            <h1 class="animated hiding" data-animation="bounceInDown" data-delay="0">Start accepting <span class="highlight">recurring</span> payments <br>in minutes!</h1>
-            <p class="animated hiding" data-animation="fadeInDown" data-delay="500">Get early access to the world's easiest payment platform</p>
-        </div>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Windy Hack | Chicago Meetup">
+		<meta name="author" content="PJ Targun">
+		<title>Hack Provo</title>
 		
-		<div class="container">
-			<div class="signup-wrapper animated hiding" data-animation="bounceInUp" data-delay="0">
-				<div class="row">
-						<form class="form-inline form-register form-register-small" method="post" action="signup.php">
-						
-							<div class="form-group">
-								<input size="30" type="text" class="form-control required" name="fullname" id="fullname" placeholder="Your name">
-							</div>
-							
-							<div class="form-group">
-								<input size="25" type="email" class="form-control required email" data-untorch-element="email" name="email" id="email" placeholder="Email">
-							</div>
-							<div class="form-group password-wrapper">
-								<input type="password" class="form-control required" name="password" id="password" placeholder="password">
-							</div>
-							<div class="form-group submit-wrap">
-								<input type="hidden" name="small-form"/>
-								<button type="submit" class="btn btn-primary btn-md" data-untorch-element="submit">Set Up Shop</button>
-							</div>
-						</form>
+		<!-- Stylesheets -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/bootstrapValidator.min.css" rel="stylesheet">
+		<link href="css/ladda-themeless.min.css" rel="stylesheet">
+		<link href="css/animate.min.css" rel="stylesheet">
+		<link href="css/app.css" rel="stylesheet">
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="img/hack.png" type="image/x-icon">
+		<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+		
+	</head>
+	<body>
+		<!-- Preloader -->
+		<div id="preloader">
+			<div id="status" class="text-center">
+				<div class="spinner">
+				  <div class="rect1"></div>
+				  <div class="rect2"></div>
+				  <div class="rect3"></div>
+				  <div class="rect4"></div>
+				  <div class="rect5"></div>
 				</div>
 			</div>
 		</div>
 		
-    </div>
-    
-    <!--<div id="clients">
-        <div class="container">
-            <ul class="list-inline logos">
-                <li><img class="animated hiding" data-animation="fadeInUp" data-delay="0" src="assets/img/logos/logo-1.png" alt="mashable" /></li>
-                <li><img class="animated hiding" data-animation="fadeInUp" data-delay="200" src="assets/img/logos/logo-2.png" alt="tnw" /></li>
-                <li><img class="animated hiding" data-animation="fadeInUp" data-delay="400" src="assets/img/logos/logo-3.png" alt="virgin" /></li>
-                <li><img class="animated hiding" data-animation="fadeInUp" data-delay="600" src="assets/img/logos/logo-4.png" alt="microsoft" /></li>
-                <li><img class="animated hiding" data-animation="fadeInUp" data-delay="800" src="assets/img/logos/logo-5.png" alt="forbes" /></li>
-            </ul>
-        </div>
-    </div>-->
-    
-    <a id="showHere"></a>
-    
-	<section id="about" class="section dark">
-        <div class="container">
-		
-            <ul class="nav nav-tabs alt">
-                <li class="active"><a href="#first-tab-alt" data-toggle="tab">FIRST TAB</a></li>
-                <li><a href="#second-tab-alt" data-toggle="tab">SECOND TAB</a></li>
-                <li><a href="#third-tab-alt" data-toggle="tab">THIRD TAB</a></li>
-            </ul>
-                    
-            <div class="tab-content alt">
-				<div class="tab-pane active" id="first-tab-alt">
-					<div class="section-content row">        
-								<div class="col-sm-6 animated hiding" data-animation="fadeInLeft">
-									<img src="assets/img/features/people.jpg" class="img-responsive" alt="process 3" />
-								</div>
-								<div class="col-sm-6 animated hiding" data-animation="fadeInRight">
-									<br/>
-									<article class="center">
-										<h3>FOR EVERY <span class="highlight">STARTUP</span></h3>
-										<div class="sub-title">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br/> sdfs sit atmet sit dolor greand fdanrh sdfs</div>
-										<p>In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret. Sed virtutem ipsam inchoavit, nihil ampliusuma. Scien tiam pollicentur, quam non erat mirum sapientiae lorem cupido patria esse cariorem. Quae qui non vident, nihilamane umquam magnum ac cognitione.</p>
-										<br/>
-										<a href="#" class="btn btn-secondary animated hiding" data-animation="bounceIn" data-delay="700">Get started</a>
-										<a href="#" class="btn btn-secondary animated hiding" data-animation="bounceIn" data-delay="700">See features</a>
-									</article>
-								</div>
-					</div>
-                </div>
-					
-                <div class="tab-pane" id="second-tab-alt">
-                           <div class="section-content row">                
-								<div class="col-sm-6 pull-right animated hiding" data-animation="fadeInRight">
-									<img src="assets/img/features/phone.jpg" class="img-responsive pull-right" alt="process 2"/>
-								</div>
-								<div class="col-sm-6 animated hiding" data-animation="fadeInLeft">
-									<br/><br/>
-									<article class="center">
-										<h3>NEW AGE <span class="highlight">TECHNOLOGY</span></h3>
-										<div class="sub-title">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br/> sdfs sit atmet sit dolor greand fdanrh sdfs</div>
-										<p>In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret. Sed virtutem ipsam inchoavit, nihil ampliusuma. Scien tiam pollicentur, quam non erat mirum sapientiae lorem cupido patria esse cariorem. Quae qui non vident, nihilamane umquam magnum ac cognitione.</p>
-									</article>
-								</div>
-					</div>
-                </div>
-
-                <div class="tab-pane" id="third-tab-alt">
-					<div class="section-header animated hiding center" data-animation="fadeInDown">
-						<h2>3 EASY STEPS</h2>
-						<div class="sub-heading">
-							Lorem ipsum dolor sit atmet sit dolor greand fdanrh s
-							<br />dfs sit atmet sit dolor greand fdanrh sdfs
+		<!-- Main -->
+		<section class="main text-center" id="home">
+			<div class="page">
+				<div class="wrapper">
+					<div class="container">
+						<img class="logo" src="img/logo/logo.png" alt="Logo">
+						<h2 class="heading">Next Event</h2>
+						<p class="top-p">
+							<h2><strong>Sponsored by:</strong> <a href="http://verisage.us">Verisage</a>, <a href="http://codingcamp.us">Coding Campus</a> and <a href="https://www.facebook.com/startupdojo">Startup Dojo!</a></h2>
+						</p>
+						<div class="row">
+							<div id="countdown"></div>
 						</div>
+						<!-- Subscription form -->
+						<!-- <form class="form-inline signup" action="php/signupForm.php" role="form" id="signupForm">
+							<div class="form-group">
+								<input type="email" name="email" class="form-control" placeholder="Email address">
+							</div> -->
+							<div class="form-group">
+								<a href="http://www.meetup.com/Hack-Provo/events/209493162/" target="_blank"><button type="submit" href="http://www.meetup.com/Hack-Provo/events/209493162/" class="btn btn-theme ladda-button" data-style="expand-left"><span class="ladda-label">RSVP Here!</span></button>
+							</div></a>
+						</form>
+						<footer class="text-center top-social">
+							<div class="social">
+								<!-- <a href="#" target="_blank" class="btn btn-theme"><i class="fa fa-facebook"></i></a> -->
+								<a href="http://Twitter.com/hackprovo" target="_blank" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
+								<!-- <a href="#" target="_blank" class="btn btn-theme"><i class="fa fa-google-plus"></i></a> -->
+								<!-- <a href="#" target="_blank" class="btn btn-theme"><i class="fa fa-dribbble"></i></a> -->
+								<!-- <a href="#" target="_blank" class="btn btn-theme"><i class="fa fa-linkedin"></i></a> -->
+							</div>
+						</footer>
 					</div>
-					<div class="section-content row">
-						<div class="col-sm-4">
-							<article class="text-center animated hiding" data-animation="fadeInLeft" data-delay="0">
-								<i class="howitworks icon icon-shopping-04 icon-active"></i>
-								<span class="h7">PLACE ORDER</span>
-								<p class="thin" >Sit amet, consectetur adipiscing elit.<br />In hac divisione rem ipsam prorsus probo<br />elegantiam desidero.</p>
-							</article>
-							<!--<span class="icon icon-arrows-04"></span>-->
-						</div>
-						<div class="col-sm-4">
-							<article class="text-center animated hiding" data-animation="fadeInLeft" data-delay="400">
-								<i class="howitworks icon icon-seo-icons-03 icon-active"></i>
-								<span class="h7">OUR SYSTEM RUNS</span>
-								<p class="thin" >Sit amet, consectetur adipiscing elit.<br />In hac divisione rem ipsam prorsus probo<br />elegantiam desidero.</p>
-							</article>
-							<!--<span class="icon icon-arrows-04"></span>-->
-						</div>
-						<div class="col-sm-4">
-							<article class="text-center animated hiding" data-animation="fadeInLeft" data-delay="800">
-								<i class="howitworks icon icon-seo-icons-05 icon-active"></i>
-								<span class="h7">RECEIVE REPORT</span>
-								<p class="thin" >Sit amet, consectetur adipiscing elit.<br />In hac divisione rem ipsam prorsus probo<br />elegantiam desidero.</p>
-							</article>
-						</div>
+					<div class="arrow-down">
+						<a class="scroll" href="#about" id="scroll"><i class="fa fa-angle-double-down"></i></a>
 					</div>
-					<br/>
-					<br/>
-				</div>	
+				</div>
 			</div>
-        </div>
-    </section>
-    
-    <hr class="no-margin" />
-    
-    <section id="process" class="section dark">
-        <div class="container">
-            <div class="section-content row">                
-                <div class="col-sm-6 pull-right animated hiding" data-animation="fadeInRight">
-                    <img src="assets/img/features/content_image1.png" class="img-responsive" alt="process 2" />
-                </div>
-                <div class="col-sm-6 animated hiding" data-animation="fadeInLeft">
-					<br/><br/>
-                    <article>
-                        <h3>The easiest solution. <span class="highlight">Guaranteed.</span></h3>
-                        <div class="sub-title">Don't settle for anything less.</div>
-                        <p>Duezee makes it easy for you to accept and manage payments for your business and for your customers to pay you! Want recurring payments? Done. Want to send reminders? Done. Want to add new services in minutes? Done. You can do all of this and more with Duezee, making it the simplest solution for managing your finances.</p>
-                    </article>
-                </div>
-                
-                <!--
-                <hr class="clearfix" />
-                
-                <div class="col-sm-6 animated hiding" data-animation="fadeInLeft">
-                    <img src="assets/img/features/helmet.jpg" class="img-responsive" alt="process 3" />
-                </div>
-                <div class="col-sm-6 animated hiding" data-animation="fadeInRight">
-					<br/><br/>
-                    <article>
-                        <h3>HANG <span class="highlight">ON TO</span> YER HELMET</h3>
-                        <div class="sub-title">Lorem ipsum dolor sit atmet sit dolor greand fdanrh<br/> sdfs sit atmet sit dolor greand fdanrh sdfs</div>
-                        <p>In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret. Sed virtutem ipsam inchoavit, nihil ampliusuma. Scien tiam pollicentur, quam non erat mirum sapientiae lorem cupido patria esse cariorem. Quae qui non vident, nihilamane umquam magnum ac cognitione.</p>
-                    </article>
-                </div>
-                -->
-                
-            </div>
-        </div>
-    </section>
-    
-    <section id="features" class="section inverted">
-        <div class="container">
-            <div class="section-content">
-                <div id="featuredTab">
-                    <ul class="list-unstyled animated hiding" data-animation="fadeInRight">
-                      <li class="active">
-                          <a href="#home" data-toggle="tab">
-                              <div class="tab-info">
-                                  <div class="tab-title">Simple Management</div>
-                                  <div class="tab-desc">Easily manage all of your<br />clients in one place</div>
-                              </div>
-                              <!--<div class="tab-icon"><span class="icon icon-multimedia-20"></span></div>-->
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#profile" data-toggle="tab">
-                              <div class="tab-info">
-                                  <div class="tab-title">The power of Mobile</div>
-                                  <div class="tab-desc">On the go? So are we.<br />send reminders and manage<br />your finances from anywhere.</div>
-                              </div>
-                              <!--<div class="tab-icon"><span class="icon icon-seo-icons-27"></span></div>-->
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#messages" data-toggle="tab">
-                              <div class="tab-info">
-                                  <div class="tab-title">Consumer Friendly</div>
-                                  <div class="tab-desc">Give your clients the power to<br />manage payments, contact you and<br />adjust on the fly.</div>
-                              </div>
-                              <!-- <div class="tab-icon"><span class="icon icon-seo-icons-28"></span></div>-->
-                          </a>
-                      </li>
-                    </ul>
-                    
-                    <div class="tab-content animated hiding" data-animation="fadeInLeft">
-                      <div class="tab-pane in active" id="home"><img src="assets/img/features/rich_features_1.png" class="img-responsive animated hiding" data-animation="fadeInLeft" alt="macbook" /></div>
-                      <div class="tab-pane" id="profile"><img src="assets/img/features/rich_features_2.png" class="img-responsive animated hiding" data-animation="fadeInLeft" alt="macbook" /></div>
-                      <div class="tab-pane" id="messages"><img src="assets/img/features/rich_features_3.png" class="img-responsive animated hiding" data-animation="fadeInLeft" alt="macbook" /></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-	
-	<section id="features-list" class="section dark">
-        <div class="container animated hiding" data-animation="fadeInDown">
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="center">	
-					<i class="icon icon-office-44 icon-active"></i>
-                    <span class="h7">Cloud Based</span>
-                    <p class="thin">Available 24/7/365 and on any of your devices. </p>
-                </article>
-            </div>                       
-			<div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="center">	
-					<i class="icon icon-shopping-18 icon-active"></i>
-                    <span class="h7">Quick Selection</span>
-                    <p class="thin">Customers will love how easy it is to pay their dues with Duezee. </p>
-                </article>
-            </div>             
-			<div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="center">	
-					<i class="icon icon-seo-icons-27 icon-active"></i>
-                    <span class="h7">Mobile Power</span>
-                    <p class="thin">Your business should be as mobile as you are, take it with you wherever you go. </p>
-                </article>
-            </div>             
-			<div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="center">	
-					<i class="icon icon-office-24 icon-active"></i>
-                    <span class="h7">Recurring Payments</span>
-                    <p class="thin">Schedule payments, send reminders, and give your customers the power to choose. </p>
-                </article>
-            </div>             
-			<div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="center">	
-					<i class="icon icon-graphic-design-13 icon-active"></i>
-                    <span class="h7">Edit on the Fly</span>
-                    <p class="thin">Modify and manage your customer relationships from anywhere in the world. </p>
-                </article>
-            </div>             
-			<div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="center">	
-					<i class="icon icon-arrows-37 icon-active"></i>
-                    <span class="h7">Comprehensive Reports</span>
-                    <p class="thin">View and manage comprehensive reports as you read your morning paper. </p>
-                </article>
-            </div>             
-			<div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="center">	
-					<i class="icon icon-badges-votes-14 icon-active"></i>
-                    <span class="h7">Secure</span>
-                    <p class="thin">Customer information is protected by world class security. </p>
-                </article>
-            </div>             
-			<div class="col-md-3 col-sm-6 col-xs-12">
-                <article class="center">	
-					<i class="icon icon-badges-votes-16 icon-active"></i>
-                    <span class="h7">First Rate Service</span>
-                    <p class="thin">Your customers deserve the best, and so do you! Make your life easier with Duezee. </p>
-                </article>
-            </div>           
-        </div>
-    </section>	
-	
-	<section id="newsletter" class="long-block light">
-        <div class="container center">
-            <div class="col-sm-12 col-lg-5">
-                <article>
-                    <h2><strong>GET</strong> LIVE UPDATES</h2>
-                     <p class="thin">No spam promise - only latest news and prices!</p>
-                </article>
-            </div>
-            <div class="col-sm-12 col-lg-7">
-			 <form id="subscribe" class="form" action="<?=$_SERVER['PHP_SELF']; ?>" method="post">
-            <div class="form-group form-inline">
-              <input size="15" type="text" class="form-control required" id="NewsletterName" name="NewsletterName" placeholder="Your name" /> 
-              <input size="25" type="email" class="form-control required" id="NewsletterEmail" name="NewsletterEmail" placeholder="your@email.com" /> 
-			  <input type="submit" class="btn btn-default" value="SUBSCRIBE" />
-			  <span id="response">
-				<? require_once('assets/mailchimp/inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
-			  </span>
-            </div>
-          </form>
-            </div>
-			
-			
-			
-        </div>
-    </section>
-	
-    <!--<section id="product" class="section dark">
-        <div class="container">
-            <div class="section-header animated hiding" data-animation="fadeInDown">
-                <h2>PRODUCT <span class="highlight">PACKAGES</span></h2>
-                <div class="sub-heading">
-                    Lorem ipsum dolor sit atmet sit dolor greand fdanrh s
-                    <br />dfs sit atmet sit dolor greand fdanrh sdfs
-                </div>
-            </div>
-            <div class="section-content row">
-            
-                <div class="col-sm-4">
-                    <div class="package-column animated hiding" data-animation="flipInY">
-                        <div class="package-title">Individual</div>
-                        <div class="package-price">
-                            <div class="price"><span class="currency">$</span>25</div>
-                            <div class="period">per month</div>
-                        </div>
-                        <div class="package-detail">
-                            <ul class="list-unstyled">
-                                <li><strong>Free</strong> Domain</li>
-                                <li><strong>Unlimited</strong> Websites</li>
-                                <li><strong>Unlimited</strong> Bandwidth</li>
-                                <li><strong>Unlimited</strong> Disk Space</li>
-                            </ul>
-                            <a href="#" class="btn btn-secondary btn-block">Get started</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-4">
-                    <div class="package-column animated hiding" data-animation="flipInY" data-delay="500">
-                        <div class="package-title">Studio</div>
-                        <div class="package-price">
-                            <div class="price"><span class="currency">$</span>45</div>
-                            <div class="period">subscription</div>
-                        </div>
-                        <div class="package-detail">
-                            <ul class="list-unstyled">
-                                <li><strong>Free</strong> Domain</li>
-                                <li><strong>Unlimited</strong> Websites</li>
-                                <li><strong>Unlimited</strong> Bandwidth</li>
-                                <li><strong>Unlimited</strong> Disk Space</li>
-                            </ul>
-                            <a href="#" class="btn btn-secondary btn-block">Get started</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-sm-4">
-                    <div class="package-column animated hiding" data-animation="flipInY">
-                        <div class="package-title">Enterprise</div>
-                        <div class="package-price">
-                            <div class="price"><span class="currency">$</span>95</div>
-                            <div class="period">per month</div>
-                        </div>
-                        <div class="package-detail">
-                            <ul class="list-unstyled">
-                                <li><strong>Free</strong> Domain</li>
-                                <li><strong>Unlimited</strong> Websites</li>
-                                <li><strong>Unlimited</strong> Bandwidth</li>
-                                <li><strong>Unlimited</strong> Disk Space</li>
-                            </ul>
-                            <a href="#" class="btn btn-secondary btn-block">Get started</a>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-	
-	<section id="awards" class="section dark">
-        <div class="container">
-            <div class="section-header animated hiding" data-animation="fadeInDown">
-                <h2><span class="highlight">OUR</span> AWARDS</h2>
-                <div class="sub-heading">
-                    Lorem ipsum dolor sit atmet sit dolor greand fdanrh s
-                    <br />dfs sit atmet sit dolor greand fdanrh sdfs
-                </div>
-            </div>
-            <div class="section-content">                
-                <ul class="list-inline logos">
-                    <li><a href="#" target="_blank"><img class="animated hiding" data-animation="fadeInUp" data-delay="0" src="assets/img/logos/award-5.jpg" alt="mashable" /></a></li> 
-                    <li><a href="#" target="_blank"><img class="animated hiding" data-animation="fadeInUp" data-delay="400" src="assets/img/logos/award-3.jpg" alt="virgin" /></a></li> 
-					<li><a href="#" target="_blank"><img class="animated hiding" data-animation="fadeInUp" data-delay="600" src="assets/img/logos/award-4.jpg" alt="forbes" /></a></li> 
-                    <li><a href="#" target="_blank"><img class="animated hiding" data-animation="fadeInUp" data-delay="800" src="assets/img/logos/award-1.jpg" alt="microsoft" /></a></li> 					
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    -->
-    
-    <section id="feedback" class="section light">
-        <div class="container">
-            <div class="section-header animated hiding" data-animation="fadeInDown">
-                <h2>WHAT <span class="highlight">CLIENTS</span> SAY</h2>
-            </div>
-            <div class="section-content">
-			
-				<!-- BEGIN SLIDER CONTENT -->
-				<div class="col-sm-10 col-sm-offset-1">
-					<div class="flexslider testimonials-slider center animated hiding" data-animation="fadeInTop">	
-						<ul class="slides">
-							<li>
-								<div class="testimonial resp-center clearfix">
-									<blockquote>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non bibendum metus. Aenean vel rutrum velit. Duis aliquet augue non augue volutpat, ut viverra est sagittis. Duis elementum mi mauris, nec rhoncus dolor consectetur vitae lorem ipsum.
-									</blockquote>
+		</section>
+		
+		<!-- About -->
+		<section id="about" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h3 class="section-title">What is Hack Provo?</h3>
+						<div class="section-title-border"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="lead">
+							<strong>Hack Provo</strong> is a casual weekly collaborative meet-up where progress is made.  We come together to meet, work and interact every <strong>Tuesday</strong> from<strong> 7pm - 10pm </strong>. Bring your own project or come and help someone in the community make progress and take their first steps!
+						</p>
+						<h2>All About Community</h2>
+						<p>HackProvo will update the blog with projects that people are currently working on, news from our small community and tips and tricks for your side projects! 
+						</p>
+						<div class="row">
+							<div class="col-sm-4 feature-box-container">
+								<div class="feature-box wow fadeInDown">
+									<div class="icon">
+										<i class="fa fa-cogs"></i>
+									</div>
+									<div class="description">
+										<h4>Collaboration</h4>
+										<p>Meet people that as passionate as you are. Get advice, mentorship and maybe you'll find someone to help with your next project.
+										</p>
+									</div>
 								</div>
-							</li>
-							<li>
-								<div class="testimonial resp-center clearfix">
-									<blockquote>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non bibendum metus. Aenean vel rutrum velit. Duis aliquet augue non augue volutpat, ut viverra est sagittis. Duis elementum mi mauris, nec rhoncus dolor consectetur vitae lorem ipsum.
-									</blockquote>
+							</div>
+							<div class="col-sm-4 feature-box-container">
+								<div class="feature-box wow fadeInDown" data-wow-delay="0.2s">
+									<div class="icon">
+										<i class="fa fa-rocket"></i> 
+									</div>
+									<div class="description">
+										<h4>Progress</h4>
+										<p>Get the ball rolling and make real progress on whatever it is you want to biuld! 
+										</p>
+									</div>
 								</div>
-							</li>
-							<li>
-								<div class="testimonial resp-center clearfix">
-									<blockquote>
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non bibendum metus. Aenean vel rutrum velit. Duis aliquet augue non augue volutpat, ut viverra est sagittis. Duis elementum mi mauris, nec rhoncus dolor consectetur vitae lorem ipsum.
-									</blockquote>
+							</div>
+							<div class="col-sm-4 feature-box-container">
+								<div class="feature-box wow fadeInDown" data-wow-delay="0.4s">
+									<div class="icon">
+										<i class="fa fa-heart"></i>
+									</div>
+									<div class="description">
+										<h4>Community</h4>
+										<p>You can come just to help if you want. Teach, learn, collaborate, and help us build the Provo Community.
+										</p>
+									</div>
 								</div>
-							</li>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- Team -->
+<!-- 		<section id="team" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h3 class="section-title">Our team</h3>
+						<div class="section-title-border"></div>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="col-sm-3 text-center team-member-container wow fadeInDown">
+						<div class="team-member">
+							<div class="team-member-img">
+								<img src="img/portraits/1.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="team-member-meta">
+								<h4>PJ Targun</h4>
+								<span class="team-member-profession">Developer</span>
+								<p>Fusce pulvinar dui eu dignissim semper. Donec non tellus felis. Vivamus dapibus placerat.</p>
+								<div class="social">
+									<a href="#" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
+									<a href="#" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
+									<a href="#‎" class="btn btn-theme"><i class="fa fa-google-plus"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 text-center team-member-container wow fadeInDown" data-wow-delay="0.2s">
+						<div class="team-member">
+							<div class="team-member-img">
+								<img src="img/portraits/2.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="team-member-meta">
+								<h4>Jessica Smith</h4>
+								<span class="text-muted team-member-profession">Designer</span>
+								<p>Sed posuere eu sem ac consectetur. Integer suscipit diam odio, in tincidunt dui aliquet eget.</p>
+								<div class="social">
+									<a href="#" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
+									<a href="#" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
+									<a href="#‎" class="btn btn-theme"><i class="fa fa-google-plus"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 text-center team-member-container wow fadeInDown" data-wow-delay="0.4s">
+						<div class="team-member">
+							<div class="team-member-img">
+								<img src="img/portraits/3.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="team-member-meta">
+								<h4>Tom Wilson</h4>
+								<span class="team-member-profession">CEO</span>
+								<p>Vivamus dapibus placerat tincidunt. 
+									Donec sit amet justo eget dolor vehicula tincidunt eu ut est.
+								</p>
+								<div class="social">
+									<a href="#" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
+									<a href="#" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
+									<a href="#‎" class="btn btn-theme"><i class="fa fa-google-plus"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 text-center team-member-container wow fadeInDown" data-wow-delay="0.6s">
+						<div class="team-member">
+							<div class="team-member-img">
+								<img src="img/portraits/4.jpg" alt="" class="img-responsive">
+							</div>
+							<div class="team-member-meta">
+								<h4>Sophie Brown</h4>
+								<span class="team-member-profession">Product manager</span>
+								<p>Phasellus malesuada augue erat, quis mollis magna fermentum at. Donec lobortis ante et dictum.</p>
+								<div class="social">
+									<a href="#" class="btn btn-theme"><i class="fa fa-facebook"></i></a>
+									<a href="#" class="btn btn-theme"><i class="fa fa-twitter"></i></a>
+									<a href="#‎" class="btn btn-theme"><i class="fa fa-google-plus"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> -->
+		
+		<!-- Contact -->
+		<!-- <section id="contact" class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h3 class="section-title">Contact</h3>
+						<div class="section-title-border"></div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<p>
+							<strong>Windy Hack</strong> gravida felis quis ornare. 
+							Pellentesque consectetur dui eu nulla vestibulum, 
+							ac euismod diam auctor. 
+						</p>
+						<ul class="list-contacts">
+							<li><i class="fa fa-phone"></i> (123) 456-7890</li>
+							<li><i class="fa fa-map-marker"></i> Chicago, IL 60661</li>
+							<li><i class="fa fa-envelope-o"></i> <a href="mailto:windyhack@gmail.com">windyhack@gmail.com</a></li>
 						</ul>
 					</div>
+					<div class="col-sm-6">
+						<form class="form-horizontal" action="php/contactForm.php" method="post" role="form" id="contactForm">
+							<div class="form-group">
+								<div class="col-sm-6">
+									<input type="text" name="name" class="form-control" placeholder="Name">	
+								</div>
+								<div class="col-sm-6">
+									<input type="text" name="contactEmail" class="form-control" placeholder="Email">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<textarea name="message" class="form-control" rows="8" placeholder="Message"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<button type="submit" class="btn btn-theme ladda-button" data-style="expand-left">
+										<span class="ladda-label">Submit</span>
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
 				</div>
-				<!-- END SLIDER -->
-            </div>
-        </div>
-    </section>
-
-	<section id="feedback-controls" class="section light">
-		<div class="container">
-			<div class="col-md-10 col-md-offset-1">
-			<!-- BEGIN CONTROLS -->
-						<div class="flex-manual">
-							<div class="col-xs-12 col-sm-4 wrap">
-								<div class="switch flex-active">
-									<img alt="client" src="assets/img/people/profile-1.jpg" class="sm-pic img-circle pull-left" width="69" height="70">
-									<p>
-										<span class="highlight">AMY WARNER</span><br/>Investor at <span class="highlight">Pear Inc.</span>
-									</p>
-								</div>
-							</div>
-											
-							<div class="col-xs-12 col-sm-4 wrap">
-								<div class="switch pull-left">
-									<img alt="client" src="assets/img/people/profile-2.jpg" class="sm-pic img-circle pull-left" width="69" height="70">
-									<p>
-										<span class="highlight">JOHN DOESOME</span><br/>Accountant at <span class="highlight">Vell Inc.</span>
-									</p>
-								</div>
-							</div>
-											
-							<div class="col-xs-12 col-sm-4 wrap">
-								<div class="switch">
-									<img alt="client" src="assets/img/people/profile-1.jpg" class="sm-pic img-circle pull-left" width="68" height="69">
-									<p>
-										<span class="highlight">PETER MOOSOME</span><br/>VP Marketing at <span class="highlight">Footbook</span>
-									</p>
-								</div>
-							</div>
-						</div>
-			<!-- END CONTROLS -->
 			</div>
-		</div>
-	</section>
-	
-    <!--
-	<section id="team" class="section dark">
-        <div class="container">
-            <div class="section-header animated hiding" data-animation="fadeInDown">
-                <h2>BEHIND <span class="highlight">THE</span> SCENES</h2>
-				<div class="sub-heading">
-                    Lorem ipsum dolor sit atmet sit dolor greand fdanrh s
-                    <br>dfs sit atmet sit dolor greand fdanrh sdfs
-                </div>
-				<br/>
-				<p>In his igitur partibus duabus nihil erat, quod Zeno commuta rest gestiret. Sed virtutem ipsam inchoavit, nihil<br/> ampliusuma. Scien tiam pollicentur, quam non erat mirum sapientiae lorem cupido patria esse cariorem. Quae<br/> qui non vident, nihilamane umquam magnum ac cognitione. In his rest gestiret. Sed ipsam inchoavit, nihil ampliusuma.<br/> Scien tiam pollicentur, quam non erat mirum sapientiae lorem cupido patria esse cariorem. Quae qui non vident,<br/> nihilamane umquam magnum ac cognitione.</p>
-            </div>
-			<div class="section-content row">
-                        <div class="member col-md-3 col-sm-3 col-xs-6 animated hiding" data-animation="fadeInDown">
-                            <div class="thumb-wrapper">
-								<div class="overlay img-circle"></div>
-								<div class="socials">
-									<a href="#"><span class="icon icon-socialmedia-08"></span></a><a href="#"><span class="icon icon-socialmedia-07"></span></a><a href="#"><span class="icon icon-socialmedia-05"></span></a><a href="#"><span class="icon icon-socialmedia-09"></span></a>
-								</div>
-                                <img src="assets/img/people/team-1.jpg" class="img-responsive img-circle" alt="thumb" />
-                            </div>
-							<span class="h7 highlight">DANIEL DASH</span>
-							<p class="thin">Designer</p>
-                        </div>  
-						
-						<div class="member col-md-3 col-sm-3 col-xs-6 animated hiding" data-animation="fadeInDown" data-delay="250">
-                            <div class="thumb-wrapper">
-								<div class="overlay img-circle"></div>
-                                <div class="socials">
-									<a href="#"><span class="icon icon-socialmedia-08"></span></a><a href="#"><span class="icon icon-socialmedia-07"></span></a><a href="#"><span class="icon icon-socialmedia-05"></span></a><a href="#"><span class="icon icon-socialmedia-09"></span></a>
-								</div>
-                                <img src="assets/img/people/team-4.jpg" class="img-responsive img-circle" alt="thumb" />
-                            </div>
-							<span class="h7 highlight">PETRA APPLES</span>
-							<p class="thin">Designer</p>
-                        </div>     
-						
-						<div class="member col-md-3 col-sm-3 col-xs-6 animated hiding" data-animation="fadeInDown" data-delay="500">
-                            <div class="thumb-wrapper">
-								<div class="overlay img-circle"></div>
-                                <div class="socials">
-									<a href="#"><span class="icon icon-socialmedia-08"></span></a><a href="#"><span class="icon icon-socialmedia-07"></span></a><a href="#"><span class="icon icon-socialmedia-05"></span></a><a href="#"><span class="icon icon-socialmedia-09"></span></a>
-								</div>
-                                <img src="assets/img/people/team-3.jpg" class="img-responsive img-circle" alt="thumb" />
-                            </div>
-							<span class="h7 highlight">MIKE LYNTON</span>
-							<p class="thin">Designer</p>
-                        </div>                        
-						
-						<div class="member col-md-3 col-sm-3 col-xs-6 animated hiding" data-animation="fadeInDown" data-delay="750">
-                            <div class="thumb-wrapper">
-								<div class="overlay img-circle"></div>
-                                <div class="socials">
-									<a href="#"><span class="icon icon-socialmedia-08"></span></a><a href="#"><span class="icon icon-socialmedia-07"></span></a><a href="#"><span class="icon icon-socialmedia-05"></span></a><a href="#"><span class="icon icon-socialmedia-09"></span></a>
-								</div>
-                                <img src="assets/img/people/team-2.jpg" class="img-responsive img-circle" alt="thumb" />
-                            </div>
-							<span class="h7 highlight">AMY PIERS</span>
-							<p class="thin">Designer</p>
-                        </div>
-
-            </div>
-        </div>
-    </section>
-    -->
-    
-    <section id="guarantee" class="long-block light">
-        <div class="container">
-            <div class="col-md-12 col-lg-9">
-				<i class="icon icon-seo-icons-24 pull-left"></i>
-                <article class="pull-left">
-                    <h2><strong>GET STARTED</strong> IN MINUTES!</h2>
-                    <p class="thin">All you have to do is start. You'll love yourself for it.</p>
-                </article>
-            </div>
-			
-            <div class="col-md-12 col-lg-3">
-                <a href="#" class="btn btn-default">Set up Shop</a>
-            </div>
-        </div>
-    </section>
-    
-    <footer id="footer" class="footer light">
-        <div class="container">
-            <div class="footer-content row">
-                <div class="col-sm-4">
-                    <div class="logo-wrapper">
-                        <img src="assets/img/logo.png" alt="logo" />
-                    </div>
-                    <p>If you aren't satisfied, let us know and we will pay you $1,000,000 in cold hard cash. That is how confident we are that you will love this, and us, forever.</p>
-                    <p><strong>Curtis Holder, Duezee Doer</strong>.</p>
-                </div>
-                <div class="col-sm-5 social-wrap">
-                    <div class="footer-title">Social Networks</div>
-                    <ul class="list-inline socials">
-                        <li><a href="#"><span class="icon icon-socialmedia-08"></span></a></li>
-                        <li><a href="#"><span class="icon icon-socialmedia-09"></span></a></li>
-                        <li><a href="#"><span class="icon icon-socialmedia-16"></span></a></li>
-                        <li><a href="#"><span class="icon icon-socialmedia-04"></span></a></li>
-                    </ul>
-                    <ul class="list-inline socials">
-                        <li><a href="#"><span class="icon icon-socialmedia-07"></span></a></li>
-                        <li><a href="#"><span class="icon icon-socialmedia-16"></span></a></li>
-                        <li><a href="#"><span class="icon icon-socialmedia-09"></span></a></li>
-                        <li><a href="#"><span class="icon icon-socialmedia-08"></span></a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3">
-                    <div class="footer-title">Our Contacts</div>
-                    <ul class="list-unstyled">
-                        <li>
-                            <span class="icon icon-chat-messages-14"></span> 
-                            <a href="mailto:info@duezee.com">info@duezee.com</a>
-                        </li>
-                        <li>
-                            <span class="icon icon-seo-icons-34"></span> 
-                            123 Duezee Drive, Salt Lake City, UT 84010
-                        </li>
-                        <li>
-                            <span class="icon icon-seo-icons-17"></span>
-                            1 - 801-686-8244
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">Duezee 2014. All rights reserved.</div>
-    </footer>
-    
-    <div class="back-to-top"><i class="fa fa-angle-up fa-3x"></i></div>
-    
-    <!--[if lt IE 9]>
-        <script type="text/javascript" src="assets/js/jquery-1.11.0.min.js?ver=1"></script>
-    <![endif]-->  
-    <!--[if (gte IE 9) | (!IE)]><!-->  
-        <script type="text/javascript" src="assets/js/jquery-2.1.0.min.js?ver=1"></script>
-    <!--<![endif]-->  
-    
-    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/jquery.flexslider-min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.nav.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.appear.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.plugin.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
-    <script type="text/javascript" src="assets/js/waypoints.min.js"></script>
-    <script type="text/javascript" src="assets/js/waypoints-sticky.min.js"></script>
-    <script type="text/javascript" src="assets/js/jquery.validate.js"></script>
-    <script type="text/javascript" src="assets/js/toastr.min.js"></script>
-    <script type="text/javascript" src="assets/js/headhesive.min.js"></script>
-	<script type="text/javascript" src="assets/mailchimp/js/mailing-list.js"></script>
-    <script type="text/javascript" src="assets/js/scripts.js"></script>
-</body>
+		</section> -->
+		
+		
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.backstretch.min.js"></script>
+		<script src="js/jquery.countdown.min.js"></script>
+		<script src="js/bootstrapValidator.min.js"></script>
+		<script src="js/validator/emailAddress.js"></script>
+		<script src="js/spin.min.js"></script>
+		<script src="js/ladda.min.js"></script>
+		<script src="js/retina.min.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/init.js"></script>
+	</body>
 </html>
